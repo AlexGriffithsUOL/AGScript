@@ -1,0 +1,33 @@
+x = 12;
+y = 13;
+z = null;
+
+if (x == 12) {
+    z = y - x;
+};
+
+class Object {
+    function print(value) {
+        return value;
+    };
+};
+
+obj = new Object();
+obj.print("Hello!");
+
+function getlist(item1, item2, item3) {
+    return [item1, item2, item3];
+}
+
+if (1 != 2) {
+    obj.print(null);
+};
+
+if ((obj and 1) == true) {
+    return false;
+};
+
+
+
+
+return 0;
