@@ -18,7 +18,7 @@ enum class TokenType {
     EQUAL,
     FUNCTION,
     LEFT_PARENTHESIS,
-    RIGHT_PARENTHISIS,
+    RIGHT_PARENTHESIS,
     NOT_EQUAL,
     LESS_THAN,
     LESS_THAN_OR_EQUAL,
@@ -46,6 +46,10 @@ enum class TokenType {
     KEYWORD,
     ELSE,
     RETURN,
+    WHILE,
+    IN,
+    FOR, 
+    LET,
     UNKNOWN
 };
 
@@ -103,7 +107,7 @@ class Lexer {
                 return makeToken(TokenType::LEFT_PARENTHESIS, "(");
             case ')':
                 advance();
-                return makeToken(TokenType::RIGHT_PARENTHISIS, ")");
+                return makeToken(TokenType::RIGHT_PARENTHESIS, ")");
             case ';':
                 advance();
                 return makeToken(TokenType::SEMI_COLON, ";");
@@ -230,7 +234,11 @@ class Lexer {
                 {"null", TokenType::NULL_LITERAL},
                 {"and", TokenType::AND},
                 {"or", TokenType::OR},
-                {"not", TokenType::NOT}
+                {"not", TokenType::NOT},
+                {"while", TokenType::WHILE},
+                {"for", TokenType::FOR},
+                {"in", TokenType::IN},
+                {"let", TokenType::LET},
             };
 
             auto it = keywords.find(ident);

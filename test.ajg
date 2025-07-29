@@ -27,7 +27,9 @@ if ((obj and 1) == true) {
     return false;
 };
 
-
+for i in 20:
+    print(i);
+    return;
 
 
 return 0;

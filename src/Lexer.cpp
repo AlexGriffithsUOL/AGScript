@@ -58,7 +58,7 @@ int main(int argc, char* argv[]) {
             case TokenType::OR: std::cout << "OR"; break;
             case TokenType::NOT: std::cout << "NOT"; break;
             case TokenType::LEFT_PARENTHESIS: std::cout << "LEFT_PAREN"; break;
-            case TokenType::RIGHT_PARENTHISIS: std::cout << "RIGHT_PAREN"; break;
+            case TokenType::RIGHT_PARENTHESIS: std::cout << "RIGHT_PAREN"; break;
             case TokenType::LEFT_BRACKET: std::cout << "LEFT_BRACKET"; break;
             case TokenType::RIGHT_BRACKET: std::cout << "RIGHT_BRACKET"; break;
             case TokenType::LEFT_BRACE: std::cout << "LEFT_BRACE"; break;
@@ -73,6 +73,10 @@ int main(int argc, char* argv[]) {
             case TokenType::FUNCTION: std::cout << "FUNCTION"; break;
             case TokenType::IF: std::cout << "IF"; break;
             case TokenType::RETURN: std::cout << "RETURN"; break;
+            case TokenType::ELSE: std::cout << "ELSE"; break;
+            case TokenType::FOR: std::cout << "FOR"; break;
+            case TokenType::WHILE: std::cout << "WHILE"; break;
+            case TokenType::IN: std::cout << "IN"; break;
         };
         
         std::cout << ", Value: '" << token.value << "', Line: " << token.line << ", Col: " << token.column << "\n";
